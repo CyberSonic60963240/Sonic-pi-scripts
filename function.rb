@@ -8,7 +8,7 @@ index = 0
 Joshua_notes = [:gs,:fs,:es,:gs,:gs,:fs,:fs,:r,:es,:gs,:b,:cs,:a,:a,:gs] # an array is a list of values
 Joshua2_sleep = [0.5,0.5,1,0.5,0.5,0.5,1.5,0.5,0.5,0.5,0.25,0.75,0.5,0.5,0.5,] # an array for the sleep
 
-define :lime do
+define :lime do #putting lime as a varible to play the song when i say lime in line 30
   1.times do
     sample Cheer
     sleep 38
@@ -16,8 +16,8 @@ define :lime do
 end
 
 4.times do
-  sample :perc_bell, rate: (rrand 0.125, 0.50)
-  sleep 0.25
+  sample :perc_bell, rate: (rrand 0.125, 0.50) # the rate of perc_bell is gonna play 4 time around 0.125-0.50
+  sleep 1
 end
 live_loop :cheerleader do
   index = 0
