@@ -1,0 +1,75 @@
+use_bpm 100
+index = 0
+with_fx:compressor do
+end
+Joshua_notes = [:fs4,:cs5,:as4,:as4,:gs4,:fs4,:fs4,:gs4,:as4,:as4,:gs4,:gs4,:fs4,:fs4,:cs5,:as4,:as4,:gs4,:fs4,:fs4,:ds4,:cs5,:gs4,:fs4,:fs4] # an array is a list of values
+Joshua2_sleep = [1,0.5,0.5,1,0.5,0.5,0.5,1,0.5,0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 1, 0.5, 0.5, 0.5, 1, 1.5, 1, 0.5, 0.5]
+
+danny="C:/Users/joshua_jimenez.DAVINCISCHOOLS/Desktop/danny.wav"
+Shrek="C:/Users/joshua_jimenez.DAVINCISCHOOLS/Desktop/Shrek.wav"
+
+define :slime do
+  1.times do
+    sample danny
+    sleep 37
+  end
+end
+define :Donkey do
+  1.times do
+    sample Shrek
+    sleep 30
+  end
+end
+
+slime
+1.times do
+  sample :bass_woodsy_c
+  sleep 1.66666666667
+  sample :bd_zum
+  sleep 0.83333333333
+end
+8.times do
+  sample :drum_heavy_kick
+  sleep 0.41666666666
+  sample :drum_soft_kick
+  sleep 0.41666666666
+  sample :bd_zum
+  sleep 0.83333333333
+end
+5.times do
+  sample :bd_zum
+  sleep 0.83333333333
+  sample :sn_zome
+  sleep 0.61111333
+  sample :drum_heavy_kick
+  sleep 0.41666666666
+  sample :drum_soft_kick
+  sleep 0.41666666666
+end
+
+1.times do
+  sample Shrek
+end
+index = 0
+25.times do # go 15 times because we have 15 values in joshua_notes
+  play Joshua_notes[index]
+  sleep Joshua2_sleep[index]
+  index = index + 1 #value will go up 1 every note and sleep
+end
+
+
+
+define :hello do |n,m,s,d,p|
+  play n
+  sleep p
+  play m
+  sleep p
+  play s
+  sleep p
+  play d
+end
+play hello :fs4,:cs5,:as4,:as4,0.5
+4.times do
+  sample :drum_heavy_kick, rate: (rrand 0.5, 0.883)
+  sleep 1
+end
