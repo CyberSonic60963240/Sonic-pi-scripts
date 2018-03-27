@@ -1,0 +1,39 @@
+
+define :slime do
+  1.times do
+    sample danny
+    sleep 37
+  end
+end
+define :Donkey do
+  1.times do
+    sample Shrek
+    sleep 30
+  end
+end
+
+slime
+1.times do
+  sample :bass_woodsy_c
+  sleep 1.66666666667
+  sample :bd_zum
+  sleep 0.83333333333
+end
+8.times do
+  sample :drum_heavy_kick
+  sleep 0.41666666666
+  sample :drum_soft_kick
+  sleep 0.41666666666
+  sample :bd_zum
+  sleep 0.83333333333
+end
+5.times do
+  sample :bd_zum
+  sleep 0.83333333333
+  sample :sn_zome
+  sleep 0.61111333
+  sample :drum_heavy_kick
+  sleep 0.41666666666
+  sample :drum_soft_kick
+  sleep 0.41666666666
+end
